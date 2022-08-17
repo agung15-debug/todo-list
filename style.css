@@ -1,0 +1,116 @@
+:root {
+  --gradient-primary: linear-gradient(to right, #fc466b, #3f5efb);
+  --primary: #393e46;
+  --txt-color: #ffd369;
+}
+
+body {
+  background-image: var(--gradient-primary);
+  font-family: "Roboto", sans-serif;
+}
+
+.conten-wrapper {
+  width: auto;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.conten-border {
+  width: 40%;
+  height: 70%;
+  background: var(--primary);
+  border-radius: 24px;
+  padding: 1rem;
+}
+
+h1 {
+  margin: 0;
+  color: var(--txt-color);
+}
+
+h3 {
+  margin: 0;
+  color: var(--txt-color);
+}
+
+form {
+  margin: 0.5rem 0 2rem 0;
+}
+input,
+button {
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+#new-task {
+  width: 70%;
+  flex: 1 1 0%;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 0.5rem;
+  border-radius: 8px;
+  margin-right: 0.5rem;
+  color: white;
+  font-size: 1.25rem;
+}
+#submit-task {
+  color: #fc466b;
+  background-image: var(--gradient-primary);
+  font-size: 1.25rem;
+  font-weight: 700;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+#submit-task:hover {
+  opacity: 0.8;
+}
+
+#submit-task:active {
+  opacity: 0.5;
+}
+
+.agenda-wrapper {
+  width: 97%;
+  flex: 1 1 0%;
+  margin: 0.5rem 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.agenda-wrapper .task .task-name {
+  color: white;
+  font-size: 1rem;
+  display: block;
+}
+
+.agenda-wrapper .task .task-name:not(:read-only) {
+  color: #ffd369;
+}
+
+.agenda-wrapper .action button {
+  cursor: pointer;
+  margin: 0 0.5rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.agenda-wrapper .action .edit {
+  color: #fc466b;
+  background-image: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.agenda-wrapper .action .delete {
+  color: crimson;
+}
